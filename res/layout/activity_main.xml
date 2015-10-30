@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ceas.azureseeking.MainActivity"
+    android:background="@drawable/bg_gv" >
+     <LinearLayout 
+        android:id="@+id/layout_top" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_alignParentLeft="true" 
+        android:layout_alignParentTop="true" >
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_alignParentTop="true"
+        android:textSize="20sp"
+        android:text="请输入检索字符：" />
+   </LinearLayout>
+    
+     <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_below="@+id/button1"
+         android:fillViewport="true"
+         android:scrollbars="none" >
+     <com.ceas.azureseeking.MyGridView
+         android:id="@+id/gridview"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentLeft="true"
+         android:horizontalSpacing="0.0dip"
+         android:listSelector="@null"
+         android:numColumns="2"
+         android:scrollbars="none"
+         android:stretchMode="columnWidth"
+         android:verticalSpacing="0.0dip" >
+     </com.ceas.azureseeking.MyGridView>
+    </ScrollView>
+
+     <EditText
+         android:id="@+id/editText1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/layout_top"
+         android:layout_toLeftOf="@+id/button1"
+         android:ems="10"
+         android:singleLine="true" >
+
+         <requestFocus />
+     </EditText>
+
+     <Button
+         android:id="@+id/button1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/editText1"
+         android:layout_alignParentRight="true"
+         android:text="查询" />
+
+</RelativeLayout>
